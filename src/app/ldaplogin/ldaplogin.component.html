@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></head>
+  
+    <title>Title</title>
+    
+<body>
+    <h1>LOGIN</h1>
+    <form [formGroup]="loginForm">
+    <div class="form-group">
+        
+
+
+            
+                        <p style="color:black">Username:</p>  <input type="text" name="userName" formControlName="userName">
+                          <p *ngIf="loginForm.controls.userName.invalid" class="alert alert-danger">This field is required!</p>
+                         
+                
+               
+                    <p style="color:black">Password:</p> <input type="text"  formControlName="password" >
+ 
+               
+                    <input   type="submit" [disabled]="!loginForm.valid">
+             
+
+        
+    </div></form>
+
+
+
+</body>
+</html> -->
+
+<html>
+  <head>
+    
+  </head>
+
+
+
+
+<div class="col-xs-6 col-md-10">
+  <form [formGroup]="loginForm" (ngSubmit)="check(userName,password)">
+       
+      
+        <div class="rcorners1">
+          <label for="userName"><b style="color:white">Username &nbsp; &nbsp; &nbsp; &nbsp;</b></label>
+          <input type="text" name="userName" formControlName="userName" placeholder="Enter Username" name="uname" [(ngModel)]="userName" required>
+            <br>
+          <label for="psw"><b style="color:white">Password &nbsp; &nbsp; &nbsp; &nbsp;</b></label>
+          <input type="password"  name="password" placeholder="Password" formControlName="password" placeholder="Enter Password" name="psw" [(ngModel)]="password" required>
+            <br>
+          <input type="submit" class="col-sm-4" id="button" value="Login">
+          
+        </div>
+        <div *ngIf="show" class="alert alert-danger">
+          <strong>{{this.response.msg}}</strong>
+        </div>
+   
+        
+       
+      </form>
+      </div>
+      </html>
