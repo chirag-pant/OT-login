@@ -29,29 +29,31 @@ export class LdaploginComponent implements OnInit {
     ;
   
  }
+
  check(username:any, password:any)
  {
+
+  
+
    this.service.authenticate(username,password)
  .subscribe((data) => 
    { let s:any=data;
-      this.save(s);
-    this.show=true;
-  
-   
-  
 
-  // .subscribe(
-  //   data =>{
-  //   this.response=data.toString();
-  //   },
-  //   error => console.log(error)
-  // )
-  // console.log(this.response)
+    console.log("s"+s);
+    console.log(username,password);
+      this.save1(s);
+      this.show=true;
+  
  })
 }
 
- save(object:any){
-    
+
+
+ save1(object:any){
+    console.log(object)
+
 this.response=object;
-console.log(this.response.msg)
+
+console.log(this.response)
+
 }}
