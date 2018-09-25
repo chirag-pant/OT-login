@@ -29,7 +29,7 @@ public authenticate(username,password):Observable<any>{
     httpOptions.headers.append('Access-Control-Allow-Credentials', 'true');
    
 
-    var url='http://10.71.68.177:8080/authenticate'
+    var url='http://localhost:8080/authenticate'
  
 
     console.log( this.http.post(url,{username,password}));

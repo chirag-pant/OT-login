@@ -15,6 +15,7 @@ export class LdaploginComponent implements OnInit {
   loginForm:FormGroup;
   response:LoginModel;
   show:boolean=false;
+  msg:string;
   constructor(private fb:FormBuilder, private service:LdapLoginService) {
    
   
@@ -40,9 +41,19 @@ export class LdaploginComponent implements OnInit {
    { let s:any=data;
 
     console.log("s"+s);
-    console.log(username,password);
-      this.save1(s);
+    
+      if(s==true){
+        this.msg="Login Successful";
+      sessionStorage.setItem(username,"true");
       this.show=true;
+        
+        
+      }
+      if(s==false){
+        this.show=true;
+        this.msg="login failed"
+      }
+      
   
  })
 }

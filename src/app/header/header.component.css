@@ -10,7 +10,7 @@ div#fixedheader {
 	width:100%;
 	color:#CCC;
 	background:#333;
-	padding:12px;
+	padding:10px;
 }
 div#fixedfooter1 {
 	margin-bottom: -20px;
@@ -21,7 +21,7 @@ div#fixedfooter1 {
 }
 div#fixedheader2 {
 	position:fixed;
-	top:50px;
+	top:60px;
 	left:0px;
 	width:100%;
 	color:rgb(82, 78, 78);

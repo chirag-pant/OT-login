@@ -1,23 +1,25 @@
 
 <html>
-<div class="col-xs-6 col-md-10">
+    
+<div >
   <form [formGroup]="loginForm" (ngSubmit)="check(userName,password)">
        
       
         <div class="rcorners1">
           <label for="userName"><b style="color:white">Username &nbsp; &nbsp; &nbsp; &nbsp;</b></label>
-          <input type="text" class="form-control" name="userName" formControlName="userName" placeholder="Enter Username" name="uname"  [(ngModel)]="userName"  required>
+          <input type="text" class="form-control" name="userName" formControlName="userName" style="width: 90%" placeholder="Enter Username" name="uname"  [(ngModel)]="userName"  required>
             <br>
           <label for="password"><b style="color:white">Password &nbsp; &nbsp; &nbsp; &nbsp;</b></label>
-          <input type="password"  name="password" placeholder="Password" formControlName="password" placeholder="Enter Password" name="psw" [(ngModel)]="password" required>
+          <input type="password"  name="password" placeholder="Password" formControlName="password" style="width: 90%" placeholder="Enter Password" name="psw" [(ngModel)]="password" required>
             <br>
            
-          <input type="submit" class="col-sm-4" id="button" value="Login">
+          <input type="submit" style="width: 50%" id="button" value="Login">
           
         </div>
-        <!-- <div *ngIf="show" class="alert alert-danger">
-              <strong>Login Succesfull :)</strong>
-        </div> -->
+        <div *ngIf="show" class="alert alert-danger">
+          <a href="ldaplogin.component.html" style=" position:absolute; TOP:0px; RIGHT:10px;">X</a>
+              <strong>{{this.msg}}</strong>
+        </div>
         
       </form>
       </div>
